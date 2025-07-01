@@ -1,0 +1,174 @@
+
+processControlBlock
+{
+    pid,
+    state,
+    program_counter,
+    general_purpose_registers,
+    instruction_register,
+    flags,
+    stack_pointer,
+    index_register,
+    memoery_points,
+    io_devices: vector<Io_Device>,
+    open_files: vector<File>,
+    parent
+}
+
+
+
+Scheduler
+{
+
+}
+
+
+fork();
+
+codeBlock
+{
+
+}
+
+
+context switching
+{
+
+}
+
+
+
+
+
+expenses process
+ms ---> 
+
+
+
+
+
+
+
+./Application
+
+int subThread()
+{
+  int a = a+b;
+  REG = a;
+  REG = b;
+  TEMP REG = a+b;
+  STORE a;
+}
+
+int main()
+{
+    ...
+    ..
+    ...
+     Thread()
+    ...
+    ..
+
+}
+
+
+single core;
+------------
+
+Waiting for the some event;
+
+
+Multicore - N cores - N instructions
+------------------------------------
+
+
+
+
+
+{
+    state1 --> Looking for sensor input
+
+....
+
+ inform to UI
+
+
+
+ ....
+ ....
+ ....
+ ....
+}
+
+
+
+{
+ ..
+
+ ......
+
+
+ ......
+ ......
+
+ ......
+ .......
+}
+
+
+
+
+URL;
+
+model;
+
+ayncCall = []; 5 sec --> 
+
+
+
+............. --> UI
+
+connect()
+{
+
+}
+
+QEvenAbstrctDispatcher(aApp-thrad(),[](){});
+
+
+
+
+1. sepearation of concerns
+2. performance
+
+
+creating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
