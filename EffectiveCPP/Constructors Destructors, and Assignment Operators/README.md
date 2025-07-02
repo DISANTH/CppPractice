@@ -1,35 +1,39 @@
-These are the topics learned from the book
+These are the topics learned from the book from the second chapter
 1. Know what functions C++ silently writes and calls
-    a. Default constructor
-    b. Copy Constructor
-    c. Assignement operator
-
-2. Explicitly disallow the use of compiler generated functions you do not want
-
-   class Uncopyable
-   {
-       protected:
-           Uncopyable() {}
-           ~Uncopyable() {}
    
-       private:
-           Uncopyable(const Uncopyable&);
-           Uncopyable& operator(const Uncopyable&); // Moving unwanted call to private section
-   };
+        a. Default constructor
+        b. Copy Constructor
+        c. Assignement operator
+
+3. Explicitly disallow the use of compiler generated functions you do not want
+
+       class Uncopyable
+       {
+           protected:
+               Uncopyable() {}
+               ~Uncopyable() {}
+       
+           private:
+               Uncopyable(const Uncopyable&);
+               Uncopyable& operator(const Uncopyable&); // Moving unwanted call to private section
+       };
 
 
-   Now let's make your class as nor copyable and assignable...
+       Now let's make your class as nor copyable and assignable...
 
-   class HomeForSale: private Uncopyable
-   {
-       ...
-   };
+       class HomeForSale: private Uncopyable
+       {
+           
+       };
 
-3. Declare destructors virtual in polymorphic Base classes to clean up the memory properly.
-   a. Polymorphic base classes should declare virtual destructors. If a class has any virtual functions, it should have a          virtual destructor.
-   b. classes not designed to be base classes or not designed to be used polymorphically should not declare virtual                destructors.
+4. Declare destructors virtual in polymorphic Base classes to clean up the memory properly.
    
-5. Prevent exceptions from leaving destructors.
+        a. Polymorphic base classes should declare virtual destructors. If a class has any virtual functions,
+           it should have a virtual destructor.
+        b. classes not designed to be base classes or not designed to be used polymorphically
+           should not declare virtual destructors.
+   
+6. Prevent exceptions from leaving destructors.
    
            class DBConn
            {
