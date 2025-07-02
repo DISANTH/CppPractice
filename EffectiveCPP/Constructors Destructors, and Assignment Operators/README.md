@@ -30,7 +30,7 @@ These are the topics learned from the book
    b. classes not designed to be base classes or not designed to be used polymorphically should not declare virtual                destructors.
    
 5. Prevent exceptions from leaving destructors.
-       ex.
+   
            class DBConn
            {
                public:
