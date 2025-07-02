@@ -34,7 +34,7 @@ These are the topics learned from the book
            class DBConn
            {
                public:
-                   ...
+                   //...
                    DBConn(): db(DBConnection())
                    {
                        db.connect();
@@ -43,7 +43,7 @@ These are the topics learned from the book
                    {
                        db.close(); // what if close throws an exception. It's a memory leak and the code after close will                                       // not execute
                        // There are two ways to handle it
-                       1. Terminate the program
+                       // 1. Terminate the program
                            try
                            {
                                db.close();
@@ -54,14 +54,14 @@ These are the topics learned from the book
                                std::abort();
                            }
    
-                       2. Swallow the exception
+                       // 2. Swallow the exception
                            try
                            {
                                db.close();
                            }
                            catch(...)
                            {
-                               Log Entry that call to close failed and continue the programming.(**Not a good practice but                                      sometime required)
+                               // Log Entry that call to close failed and continue the programming.(**Not a good practice but                            // but sometimes required)
                            }
                    }
                private:
@@ -90,7 +90,6 @@ These are the topics learned from the book
                            }
                            catch(...)
                            {
-                               Log Entry that call to close failed and continue the programming.(**Not a good practice but                                      sometime required)
                            }
                        }
                    }
